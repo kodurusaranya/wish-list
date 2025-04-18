@@ -2,6 +2,13 @@
     <element db_object_id="3555c87e8370221066575950ceaad3e9" label="Wish Item" max_length="40" name="x_1632402_wish_lis_wish_item" type="collection">
         <element display="true" label="URL" max_length="1024" name="url" type="url"/>
         <element label="Quantity" max_length="40" name="quantity" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Display name" max_length="40" name="display_name" read_only="true" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Choice 2" sequence="1" value="Choice 2"/>
+                <element inactive_on_update="false" label="Choice 3" sequence="2" value="Choice 3"/>
+                <element inactive_on_update="false" label="Choice 1" sequence="0" value="Choice 1"/>
+            </choice>
+        </element>
         <element attributes="encode_utf8=false" label="Requester" mandatory="true" max_length="32" name="requester" reference="sys_user" type="reference"/>
         <element attributes="edge_encryption_enabled=true" label="Item" mandatory="true" max_length="125" name="item" type="string"/>
         <index name="index">
